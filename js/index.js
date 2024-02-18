@@ -20,11 +20,10 @@ function buttonClickHandler(event) {
     totalTicketPrice += 550;
     grandTotal += 550;
    
-
-   const applyBtn = document.getElementById('apply-btn');
-      applyBtn.removeAttribute('disabled')
-
-
+    if (selectedSeatNo === 4) {
+      const applyBtn = document.getElementById("apply-btn");
+      applyBtn.removeAttribute("disabled");
+    }
 
     const seatCount = document.getElementById("selectedSeat-no");
     seatCount.innerText = selectedSeatNo;
@@ -55,7 +54,7 @@ btn.addEventListener("click", function () {
   let couponElement = document.getElementById("input-field").value;
   const couponCode = couponElement.split(" ").join("").toUpperCase();
   console.log(couponCode);
-
+  const applyBtnContainer =document.getElementById('apply-btn-container');
   if (couponCode === "NEW15") {
     if (selectedSeatNo === 4) {
       let discountPrice = totalTicketPrice * 0.15;
@@ -64,8 +63,10 @@ btn.addEventListener("click", function () {
       const p = document.createElement("p");
       p.innerText = "discount Price :" + discountPrice + "Tk Only";
       discountContainer.appendChild(p);
+      applyBtnContainer.classList.add('hidden')
     } else {
       alert("You have to purchase 4 tickets to get the discount");
+      applyBtnContainer.classList.add('hidden')
     }
   } else if (couponCode === "COUPLE20") {
     let discountPrice = totalTicketPrice * 0.2;
@@ -77,8 +78,10 @@ btn.addEventListener("click", function () {
     p.innerText = "discount Price : " + discountPrice + " Tk Only";
 
     discountContainer.appendChild(p);
+    applyBtnContainer.classList.add('hidden')
   } else {
     alert("Invalid couponCode");
+    applyBtnContainer.classList.add('hidden')
   }
 
   const restTotal = document.getElementById("grand-total");
@@ -86,37 +89,32 @@ btn.addEventListener("click", function () {
   document.getElementById("input-field").value = "";
 });
 
-
-
-document.getElementById('btn-next').addEventListener('click', function(){
+document.getElementById("btn-next").addEventListener("click", function () {
   const inputNum = document.getElementById("phone-number").value;
-  if(selectedSeatNo !== 0 && inputNum.trim() !== ''){
-    document.location = '#my_modal_8'
-  }else{
-    alert("Please Book a Seat")
+  if (selectedSeatNo !== 0 && inputNum.trim() !== "") {
+    document.location = "#my_modal_8";
+  } else {
+    alert("Please Book a Seat");
   }
-})
-
- 
+});
 
 // Attach the event listener to each button
 const buttons = document.querySelectorAll(".myButton");
 buttons.forEach((button) => {
-
   button.addEventListener("click", buttonClickHandler);
-  
 });
-
 
 function nextBTNAndEna() {
   const nextButton = document.getElementById("btn-next");
   const inputNum = document.getElementById("phone-number").value;
-  if (selectedSeatNo > 0 && inputNum.trim() !== '') {
+  if (selectedSeatNo > 0 && inputNum.trim() !== "") {
     nextButton.removeAttribute("disabled");
   } else {
     nextButton.setAttribute("disabled", "disabled");
   }
 }
 
-document.getElementById("phone-number").addEventListener('input', nextBTNAndEna);
+document
+  .getElementById("phone-number")
+  .addEventListener("input", nextBTNAndEna);
 nextBTNAndEna();
