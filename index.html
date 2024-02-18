@@ -582,6 +582,7 @@
                   placeholder="Have any coupon?"
                 />
                 <button
+                  disabled
                   id="apply-btn"
                   class="bg-[#1DD100] p-2 px-5 disabled rounded -ml-12 text-white"
                 >
@@ -596,9 +597,7 @@
               </div>
             </div>
 
-            <div id="modal" class="hidden">
-                    <h2>Imran</h2>
-            </div>
+          
 
 
 
@@ -636,12 +635,32 @@
                 />
               </label>
             </div>
-            <button
+          <!--   <button
               id="btn-next"
               class="btn bg-[#1DD100] text-white  w-96 ml-12 mt-12"
             >
               Next
-            </button>
+            </button> -->
+
+<button href="#my_modal_8"  id="btn-next"  disabled
+class="btn bg-[#1DD100] text-white  w-96 ml-12 mt-12">NEXT</button>
+<div class="modal" role="dialog" id="my_modal_8">
+  <div class="modal-box">
+  <div class="text-center flex justify-center items-center flex-col">
+    <img class="w-[100px] h-[97px]" src="images/success.png" alt="">
+    <h3 class="font-bold text-lg">Congratulation!</h3>
+    <p class="py-4">Your Ticket is Confirmed</p>
+    <div class="modal-action">
+     <a href="#" class="btn">Continue</a>
+  </div>
+    </div>
+  </div>
+</div>
+ 
+  
+
+
+
             <div class="flex justify-between px-12 mt-12">
               <div>
                 <h5 class="font-semibold">Terms and Conditions</h5>
