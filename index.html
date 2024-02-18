@@ -51,7 +51,7 @@
               </ul>
             </div>
             <div class="navbar-end">
-                <span id="seat-left" class="font-semibold mr-2 text-green-500 text-xl">40</span>
+                <span  class="font-semibold mr-2 text-green-500 text-xl">40</span>
                 <p class="text-xl font-bold mr-2 text-green-500"> Bus </p>
              <img src="./images/bus-icon.png" alt="">
             </div>
@@ -137,7 +137,7 @@
                                 </div>
                                 <div class="flex flex-col lg:flex-row justify-between items-center  bg-green-300  lg:w-36 rounded-lg lg:p-2 opacity-75 ">
                                     <img src="./images/seat-green-filled.png" alt=""> 
-                                    <span>40 Seats left</span>
+                                    <span id="seat-left" class=" font-bodl text-xl">40 </span> <span>Seats left</span>
                                 </div>
                              </div>
                              <div class="bg-[#F7F8F8] p-5 rounded-lg mt-5 text-xl">
@@ -372,26 +372,26 @@
                                 
                          </div>
                          <div id="price">
-                                <p>500 Tk</p>
-                                <p>500 Tk</p>
-                                <p>500 Tk</p>
-                                <p>500 Tk</p>
+                                <p>550 Tk</p>
+                                <p>550 Tk</p>
+                                <p>550 Tk</p>
+                                <p>550 Tk</p>
                                 
                          </div>
                     </div>
                     <hr class="border mt-5">
                     <div class="flex justify-between mt-5">
                         <h2 class="font-bold">Total Price</h2>
-                         <h3 class="font-bold">BDT <span id="total-price"></span>  Only</h3>
+                         <h3 class="font-bold">BDT <span id="total-price">0</span>  Only</h3>
 
                     </div>
-                    <div>
+                    <div class="mb-5">
                         <input id="input-field" type="text" class="p-2 mt-5 bg-[#FFFFFF] px-12 rounded-lg" placeholder="Have any coupon?">
-                        <button class="bg-[#1DD100] p-2 px-5 rounded -ml-12 text-white">Apply</button>
+                        <button id="apply-btn" class="bg-[#1DD100] p-2 px-5  rounded -ml-12 text-white">Apply</button>
                      </div>
-                     <div class="grand-total flex justify-between">
-                         <h2 class="text-lg font-bold">Grand Total</h2>
-                         <h3 class="font-bold">BDT <span>1100</span> </h3>
+                     <div class="grand-total mb-5 flex justify-between">
+                         <h2 class="text-lg font-bold">Grand Total :</h2>
+                         <h3 class="font-bold">BDT <span id="grand-total">0</span> <span>Only</span> </h3>
                      </div>
                 </div>
                 <div id="passenger-info" class="ml-12 mt-5 space-y-5">
@@ -420,7 +420,7 @@
                        
                       </label>
                 </div>
-                <button class="btn bg-[#1DD100] text-white  w-96 ml-12 mt-12">Next</button>
+                <button id="btn-next" class="btn bg-[#1DD100] text-white disabled  w-96 ml-12 mt-12">Next</button>
                 <div class="flex justify-between px-12 mt-12">
                     <div>
                      <h5 class="font-semibold">Terms and Conditions</h5>
