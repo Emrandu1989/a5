@@ -57,7 +57,7 @@ function buttonClickHandler(event) {
 
 const btn = document.getElementById('apply-btn');
 btn.addEventListener('click', function(){
-    const couponElement = document.getElementById('input-field').value;
+    let couponElement = document.getElementById('input-field').value;
     const couponCode = couponElement.split(' ').join('').toUpperCase();
     console.log(couponCode);
 
@@ -67,15 +67,26 @@ btn.addEventListener('click', function(){
            let discountPrice = totalTicketPrice * 0.15;
             grandTotal -= discountPrice;
           
-            const restTotal = document.getElementById('grand-total');
-            restTotal.innerText = grandTotal;
+           
+            
 
         }else{
             alert('You have to purchase 4 tickets to get the discount')
         }
-    }else{
+    } else if (couponCode === "COUPLE20") {
+        let discountPrice = totalTicketPrice * 0.20;
+        grandTotal -= discountPrice; 
+    }
+    
+    else{
         alert('Invalid couponCode')
     }
+
+    const restTotal = document.getElementById('grand-total');
+    restTotal.innerText = grandTotal;
+    document.getElementById('input-field').value = "";
+
+    
      
 })
 
