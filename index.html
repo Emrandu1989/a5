@@ -51,7 +51,7 @@
               </ul>
             </div>
             <div class="navbar-end">
-                <span class="font-semibold mr-2 text-green-500 text-xl">40</span>
+                <span id="seat-left" class="font-semibold mr-2 text-green-500 text-xl">40</span>
                 <p class="text-xl font-bold mr-2 text-green-500"> Bus </p>
              <img src="./images/bus-icon.png" alt="">
             </div>
@@ -64,7 +64,9 @@
               <div class="max-w-md">
                 <h1 class="mb-5 text-4xl font-bold text-white">End to End Travel with <br> <span class="text-green-500  t">Pabna  Paribahan</span> </h1>
                 <p class="mb-5 mt-9">We Provident world class service for our customers safety and security. Travel with ph paribahan for comfortable journey.</p>
-                <button class="btn bg-green-400  mt-12 ">Buy Tickets</button>
+                <a href="#booking-top"> 
+                  <button class="btn bg-green-400  mt-12 ">Buy Tickets</button>
+                </a>
               </div>
             </div>
           </div>
@@ -262,7 +264,7 @@
                   <div id="E2" class="w-24 h-12 myButton -ml-5 bg-[#E6E7E8] rounded-2xl flex justify-center items-center uppercase">
                     <button>E2</button>
                   </div>
-                  <div id="E3" class="w-24 h-12  ml-5 bg-[#E6E7E8] rounded-2xl flex justify-center items-center uppercase">
+                  <div id="E3" class="w-24 h-12 myButton  ml-5 bg-[#E6E7E8] rounded-2xl flex justify-center items-center uppercase">
                     <button>E3</button>
                   </div>
                   <div id="E4" class="w-24 h-12 myButton bg-[#E6E7E8] rounded-2xl flex justify-center items-center uppercase">
@@ -352,7 +354,7 @@
 
                 <div class="selected-items rounded-lg bg-[#F7F8F8] py-2 px-12">
                     <div class="flex justify-between">
-                        <h3>Seat <span id="selectedSeatCount">0</span> </h3>
+                        <h3>Seat <span id="selectedSeat-no">0</span> </h3>
                         <h3 class="-ml-12">Class</h3>
                         <h3>Price</h3>
                     </div>
@@ -370,14 +372,17 @@
                                 
                          </div>
                          <div id="price">
-                                
+                                <p>500 Tk</p>
+                                <p>500 Tk</p>
+                                <p>500 Tk</p>
+                                <p>500 Tk</p>
                                 
                          </div>
                     </div>
                     <hr class="border mt-5">
                     <div class="flex justify-between mt-5">
                         <h2 class="font-bold">Total Price</h2>
-                         <h3 class="font-bold">BDT <span id="total-price">1100</span></h3>
+                         <h3 class="font-bold">BDT <span id="total-price"></span>  Only</h3>
 
                     </div>
                     <div>
