@@ -66,6 +66,10 @@ btn.addEventListener('click', function(){
             
            let discountPrice = totalTicketPrice * 0.15;
             grandTotal -= discountPrice;
+            const discountContainer = document.getElementById('discount-container');
+            const p = document.createElement('p');
+            p.innerText = "discount Price :" +  discountPrice + "Tk Only";
+            discountContainer.appendChild(p);
           
            
             
@@ -76,6 +80,15 @@ btn.addEventListener('click', function(){
     } else if (couponCode === "COUPLE20") {
         let discountPrice = totalTicketPrice * 0.20;
         grandTotal -= discountPrice; 
+
+        const discountContainer = document.getElementById('discount-container');
+         const p = document.createElement('p');
+         const p2 = document.createElement('p');
+         p.innerText = "discount Price : " + discountPrice + " Tk Only" ;
+         
+         discountContainer.appendChild(p);
+         
+         
     }
     
     else{
