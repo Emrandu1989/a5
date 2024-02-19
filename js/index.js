@@ -61,7 +61,10 @@ btn.addEventListener("click", function () {
       grandTotal -= discountPrice;
       const discountContainer = document.getElementById("discount-container");
       const p = document.createElement("p");
-      p.innerText = "discount Price :" + discountPrice + "Tk Only";
+      const h2 = document.createElement("h2");
+      h2.innerText = "Discount Price : "
+      p.innerText =  discountPrice + " Tk Only";
+      discountContainer.appendChild(h2);
       discountContainer.appendChild(p);
       applyBtnContainer.classList.add('hidden')
     } else {
@@ -73,10 +76,13 @@ btn.addEventListener("click", function () {
     grandTotal -= discountPrice;
 
     const discountContainer = document.getElementById("discount-container");
+   
     const p = document.createElement("p");
-    const p2 = document.createElement("p");
-    p.innerText = "discount Price : " + discountPrice + " Tk Only";
-
+    const h2 = document.createElement("h2");
+    h2.innerText = "Discount Price : "
+    p.innerText =  + discountPrice + " Tk Only";
+    
+    discountContainer.appendChild(h2);
     discountContainer.appendChild(p);
     applyBtnContainer.classList.add('hidden')
   } else {
